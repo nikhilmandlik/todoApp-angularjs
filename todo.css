@@ -1,0 +1,133 @@
+body {
+    font-family: sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+ol {
+    margin: 10px;
+    padding: 0;
+}
+
+li {
+    background-color: #bababa;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom: 2px;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+li:nth-child(odd) {
+    background-color: #396082;
+    color: #ffffff;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.list-controls {
+    padding: 5px 0;
+}
+
+.list-controls span {
+    color: #237fcc;
+    display: inline-block
+    width: 20%;
+}
+
+.newTodoText {
+    border-radius: 5px;
+    border:0;
+    font-size: 20px;
+    height: 30px;
+    margin-bottom: 10px;
+    outline: none;
+    padding: 10px;
+}
+
+.submit {
+    border-radius: 22px;
+    border: 3px solid;
+    box-sizing: border-box;
+    color: #237fcc;
+    cursor: pointer;
+    font-size: 55px;
+    height: 45px;
+    line-height: 32px;
+    margin: 0 0 10px 10px;
+    position: absolute;
+    width: 45px;
+}
+
+.todo-container {
+    background-color: #e2e2e2;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 20px auto;
+    max-width: 720px;
+    min-width: 300px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.todo-header {
+    border: 1px solid #808080;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.header-title {
+    color: #114d80;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 15px 0 15px 0;
+}
+
+.todo-list {
+    color: #5d5d5d;
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
+.todo-list-header {
+    font-size: 15px;
+    padding: 15px;
+}
+
+.todo-list-header span {
+    cursor: pointer;
+    margin: 0 10px;
+    text-decoration: underline;
+}
+
+.todo-list-header .list {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.todo-text {
+    text-transform: capitalize;
+}
+
+
+@media (max-width: 414px) {
+    .form {
+        text-align: left;
+        padding: 5px;
+    }
+
+    .newTodoText {
+        width: 72%;
+    }
+
+    .submit {
+        text-align: center;
+    }
+}

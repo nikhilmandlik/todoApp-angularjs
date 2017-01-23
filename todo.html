@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Todos</title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.20/angular.js"></script>
+        <script type="text/javascript" src="todo.js"></script>
+        <link rel="stylesheet" href="todo.css">
+    </head>
+    <body>
+        <div class="todo-container" ng-controller="todoController">
+
+            <div class="todo-header">
+                <div class="header-title">TODO APP</div>
+                <form class="form" ng-submit="submit()">
+                    <input class="newTodoText" type="text" ng-model="newTodoText" placeholder="Add new Todo">
+                    <span class="submit" type="submit" ng-click="submit()">+</span>
+                </form>
+            </div>
+
+
+            <div class="todo-list" ng-if="todoList.length">
+                <div class="todo-list-header">
+                    <div class="list">TODO List</div>
+                    <hr>
+                    <div class="list-controls">
+                        <span class="select-all" ng-click="selectAll()">Select All</span>
+                        <span class="clear-all" ng-show="getSelectedTodoLength()" ng-click="clearAll()">Clear All</span>
+                        <span class="remove-selected" ng-show="getSelectedTodoLength()" ng-click="removeSelected()">Remove Selected</span>
+                        <span class="remove-all" ng-click="removeAll()">Remove All</span>
+                    </div>
+                </div>
+
+
+                <ol>
+                    <li ng-repeat="todo in todoList">
+                       <input type="checkbox" ng-model="todo.done">
+                       <span class="todo-text" ng-class="{'done' : todo.done == true}"> {{ todo.text }}</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </body>
+</html>
