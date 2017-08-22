@@ -9,15 +9,13 @@
     </head>
     <body>
         <div class="todo-container" ng-controller="todoController">
-
             <div class="todo-header">
                 <div class="header-title">TODO APP</div>
                 <form class="form" ng-submit="submit()">
-                    <input class="newTodoText" type="text" ng-model="newTodoText" placeholder="Add new Todo">
+                    <input class="newTodoText" type="text" ng-model="newTodoText" placeholder="Add new Todo" autofocus>
                     <span class="submit" type="submit" ng-click="submit()">+</span>
                 </form>
             </div>
-
 
             <div class="todo-list" ng-if="todoList.length">
                 <div class="todo-list-header">
@@ -30,7 +28,6 @@
                         <span class="remove-all" ng-click="removeAll()">Remove All</span>
                     </div>
                 </div>
-
 
                 <ol>
                     <li ng-repeat="todo in todoList">

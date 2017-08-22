@@ -46,9 +46,9 @@ todoApp.controller('todoController', ['$scope' , function ($scope) {
     }
 
    $scope.submit = function () {
-       if ($scope.newTodoText === "") {
-         return;
-       }
+        if (!$scope.newTodoText || $scope.newTodoText === "") {
+           return;
+        }
 
        var newTodo = {
          text: $scope.newTodoText,
